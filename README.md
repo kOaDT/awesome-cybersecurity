@@ -1,24 +1,24 @@
 # Awesome Cybersecurity [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
-[![awesome-lint](https://github.com/liyansong2018/awesome-cybersecurity/actions/workflows/awesome-lint.yml/badge.svg)](https://github.com/liyansong2018/awesome-cybersecurity/actions/workflows/awesome-lint.yml)
+[![awesome-lint](https://github.com/secnotes/awesome-cybersecurity/actions/workflows/awesome-lint.yml/badge.svg)](https://github.com/secnotes/awesome-cybersecurity/actions/workflows/awesome-lint.yml)
 
 A collection of awesome repositories about security on GitHub. We use *Python Web Crawler* to search all awesome-security repositories and made corresponding statistics on the scan results. Below are some valuable repositories.
 
 <div align=center>
-<img src="https://github.com/liyansong2018/awesome-cybersecurity/blob/main/images/top_repositories.png" width="80%">
+<img src="https://github.com/secnotes/awesome-cybersecurity/blob/main/images/top_repositories.png" width="80%">
 </div>
 
 <br />
 
 <div align=center>
-<img src="https://github.com/liyansong2018/awesome-cybersecurity/blob/main/images/trend_repositories.png" width="80%">
+<img src="https://github.com/secnotes/awesome-cybersecurity/blob/main/images/trend_repositories.png" width="80%">
 </div>
 
-Awesome cybersecurity repositories (Updated in the last three years, 50 stars +)
+Awesome cybersecurity repositories (Data is automatically updated regularly)
 
 👉 Chinese is available 中文
 
 - [网络安全资源精选](https://www.freebuf.com/news/323897.html)（Freebuf 博客，中译版）
-- [网络安全中文资源精选](https://github.com/liyansong2018/awesome-cybersecurity/blob/main/README_ZH.md)（非英文版翻译，专注于网络安全中文学习资料，正在完善中.）
+- [网络安全中文资源精选](https://github.com/secnotes/awesome-cybersecurity/blob/main/README_ZH.md)（非英文版翻译，专注于网络安全中文学习资料，正在完善中.）
 
 ## Contents
 

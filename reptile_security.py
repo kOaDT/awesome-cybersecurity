@@ -1,7 +1,7 @@
 '''
-Author: liyansong2018
-Version: 1.2
-Date: 2024-05-22
+Author: Sec Notes
+Version: 1.3
+Date: 2025-05-17
 Description: github modify json api
 Caution: You have exceeded a secondary rate limit.
 - User-to-server requests are limited to 5,000 requests per hour and per authenticated user.
@@ -84,7 +84,7 @@ def handle_disc(github_disc):
     else:
         return github_disc
 
-def main(keywords, page_number, star_number, cookie, proxies=None):
+def main(keywords, page_number, star_number, cookie, token, proxies=None):
     if len(sys.argv) <= 1:
         print('<usage>: %s [file.csv]')
         exit(-1)
@@ -94,6 +94,7 @@ def main(keywords, page_number, star_number, cookie, proxies=None):
         'Accept-encoding': 'gzip, deflate, br',
         'Accept-language': 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
         'Cache-control': 'max-age=0',
+        'Authorization': token,
         'Cookie': cookie,       # Your cookie
         'if-none-match': 'W/"8c869a44ef95afccba0e45886711dbbf"',
         'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="98", "Microsoft Edge";v="98"',
@@ -122,7 +123,7 @@ def main(keywords, page_number, star_number, cookie, proxies=None):
                     dict = json.loads(application_json.get_text())
                 except Exception as e:
                     # github-error-rate-limit-exceeded
-                    time.sleep(random.randint(1, 5))
+                    time.sleep(random.randint(1, 4))
                     continue
                 else:
                     break
@@ -140,6 +141,21 @@ def main(keywords, page_number, star_number, cookie, proxies=None):
                 year = float(update_time[:4])
                 repo_url = 'https://github.com/{}/{}'.format(user, name)
 
+                #  获取项目创建日期
+                repo_api = 'https://api.github.com/repos/{}/{}'.format(user, name)
+                print("    %s" % repo_api)
+                while True:
+                    try:
+                        response = requests.get(url=repo_api, headers=headers, proxies=proxies, verify=False)
+                        dict = json.loads(response.text)
+                        created_at = float(dict['created_at'][:4])
+                    except Exception as e:
+                        # github-error-rate-limit-exceeded
+                        time.sleep(random.randint(1, 5))
+                        continue
+                    else:
+                        break
+
                 # 如果id不重复，且star数大于我们设定的目标，则添加到列表
                 if id not in has_id and star >= star_number:
                     has_id.append(id)
@@ -155,10 +171,11 @@ def main(keywords, page_number, star_number, cookie, proxies=None):
                         'star': star,
                         'update time': update_time,
                         'year': year,
-                        'url': repo_url
+                        'url': repo_url,
+                        'created_time': created_at
                     })
 
-    head = ['id', 'name', 'user', 'discription', 'star', 'update time', 'year', 'url']
+    head = ['id', 'name', 'user', 'discription', 'star', 'update time', 'year', 'url', 'created_time']
     with open(sys.argv[1], 'w', newline='', encoding='utf-8-sig') as fp:
         fp_csv = csv.DictWriter(fp, head)
         fp_csv.writeheader()
@@ -167,13 +184,14 @@ def main(keywords, page_number, star_number, cookie, proxies=None):
 if __name__ == '__main__':
     urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
     cookie = ''     # Your github account cookie! (Optional)
+    token = '' # Your github account token! (Optional)
     proxies = {
-        "http": "http://localhost:10809",
-        "https": "http://localhost:10809",
+        "http": "http://localhost:7890",
+        "https": "http://localhost:7890",
     }
     keywords = ['awesome-security', 'awesome_cybersecurity']
     page_number = 20
     star_number = 10
 
-    main(keywords, page_number, star_number, cookie, proxies)
+    main(keywords, page_number, star_number, cookie, token, proxies)
 
