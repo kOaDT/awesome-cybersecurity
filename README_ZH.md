@@ -1,17 +1,30 @@
-非英文版翻译，专注于网络安全中文学习资料，正在完善中...
-
 ## 安全资讯
 
 :white_check_mark:| 业界前沿 | 小众社区 | 威胁情报 |
 
-* **[每日安全](https://sec.today/)** - 每日安全最开始是一个腾讯安全玄武实验室内部项目，通过交叉检索公开的数据源来建立一个信息安全资讯的聚合网站。用它来发现历史议题中隐藏的珍贵信息，跟踪最新的研究方向，以及阅读每日的信息安全新闻。
+* **[每日安全](https://sec.today/)** - 每日安全最开始是一个腾讯安全玄武实验室内部项目，通过交叉检索公开的数据源来建立一个信息安全资讯的聚合网站。用它来发现历史议题中隐藏的珍贵信息，跟踪最新的研究方向，以及阅读每日的信息安全新闻
+
 * **[先知社区](https://xz.aliyun.com/)** - 一个非常专业的安全技术社区
+
 * **[安全技术精粹](https://paper.seebug.org/)** - seebug paper是由知道创宇收录的经典安全技术文章
-* **[跳跳糖](http://tttang.com/)** - 小众却很优秀的安全社区
+
+* **[跳跳糖](http://tttang.com/)** - 小众却很优秀的安全社区，可惜近两年没有更新了。
+
 * **[InfoCon](https://infocondb.org)** - 一个对黑客和信息安全会议进行分类和交叉引用的网站
+
 * **[ctfiot](http://www.ctfiot.com/)** - 收录 CTF+IOT+工控可以学习的平台，推荐的部分博客如 Delikely，质量较高
-* 大众化社区 - [Freebuf](https://www.freebuf.com/), [看雪](https://bbs.kanxue.com/), [安全客](https://www.anquanke.com/), [安全内参](https://www.secrss.com/)
+
 * [IOTSec-Zone](https://www.iotsec-zone.com/) - 物联网安全社区
+
+* [Security Week](https://www.securityweek.com/) - 专注于网络安全新闻、分析和专家观点的专业平台
+
+* [The Hacker News](https://thehackernews.com/) - 国际知名的网络安全新闻和信息网站
+
+* [Daily CyberSecurity](https://securityonline.info/) - 国外网络安全新闻，缺点是网页渲染较慢，可能还有收费业务
+
+* [unsafe](https://unsafe.sh/) - 出色的网络安全威胁情报的网站
+
+* 国内大众化社区 - [Freebuf](https://www.freebuf.com/), [看雪](https://bbs.kanxue.com/), [安全客](https://www.anquanke.com/), [安全内参](https://www.secrss.com/)
 
 ## 系统安全
 
@@ -53,7 +66,7 @@
 * [awesome-embedded-and-iot-security](https://github.com/fkie-cad/awesome-embedded-and-iot-security)\- 很棒的嵌入式和物联网安全资源的精选列表
 * [awesome-firmware-security](https://github.com/PreOS-Security/awesome-firmware-security)\- 很棒的固件安全性和其他有用的文档
 
-## 代码安全及编程规范
+## 编码安全
 
 :white_check_mark:| Java | Python | PHP | Golang | Ruby | JS |
 
@@ -99,8 +112,7 @@
 * **[sec_skills](https://github.com/feicong/sec_skills)** - 软件安全工程师技能表（**中文**）
 * [sec-interview](https://github.com/d1nfinite/sec-interview) - 信息安全面试题汇总（**中文**）
 * [sec_interview_know_list](https://github.com/tiaotiaolong/sec_interview_know_list) - 信息安全方面面试清单（**中文**）
-* [JavaSecInterview](https://github.com/4ra1n/JavaSecInterview) - 
-Java安全研究与安全开发面试题库，同是也是常见知识点的梳理和总结（**中文**）
+* [JavaSecInterview](https://github.com/4ra1n/JavaSecInterview) - Java安全研究与安全开发面试题库，同是也是常见知识点的梳理和总结（**中文**）
 * [secbook](https://github.com/riusksk/secbook) - 信息安全从业者书单推荐（**中文**）
 * **[public-pentesting-reports](https://github.com/juliocesarfort/public-pentesting-reports)** - 各种渗透测试报告
 
